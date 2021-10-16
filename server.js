@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
     status: json.status,
   });
 });
-app.use("/", routes);
+app.use("/api", routes);
 
 app.listen(port, () => {
   console.log(`running at http://localhost:${port}`);
