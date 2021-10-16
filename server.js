@@ -7,8 +7,7 @@ const routes = require("./src/routes");
 const json = require("./package.json");
 
 const app = express();
-const port = process.env.PORT_SERVER;
-console.log(port);
+const port = process.env.PORT_SERVER || config.httpPort;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
