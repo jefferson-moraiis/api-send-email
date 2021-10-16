@@ -1,6 +1,6 @@
 {
   "name": "api-send-email",
-  "status":"ok",
+  "status": "ok",
   "version": "1.0.0",
   "description": "api to send email",
   "main": "server.js",
@@ -15,8 +15,11 @@
     "body-parser": "^1.19.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "heroku": "^7.59.0",
     "node": "^16.10.0",
-    "nodemailer": "^6.7.0",
+    "nodemailer": "^6.7.0"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.13"
   }
 }
