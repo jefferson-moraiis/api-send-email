@@ -1,7 +1,8 @@
 {
   "name": "api-send-email",
+  "status":"ok",
   "version": "1.0.0",
-  "description": "",
+  "description": "api to send email",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
