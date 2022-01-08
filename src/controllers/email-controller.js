@@ -8,7 +8,7 @@ const getData = async (req, res) => {
   const bodyJsonSchema = joi.object({
     subject: joi.string().required(),
     name: joi.string().required(),
-    phone: joi.number().minlength(11).maxlength(11).required(),
+    phone: joi.number().min(11).max(11).required(),
     email: joi.string().email().required(),
     message: joi.string().required(),
   });
@@ -41,7 +41,7 @@ const getData = async (req, res) => {
         "Email enviado com sucesso! verique sua caixa de span,iremos entrar em contato o mais rapido possivel",
     });
   } catch (error) {
-    return res.status(err.response.status).json({ error: error.message });
+    return res.status(400).json({ error: error.message });
   }
 };
 
