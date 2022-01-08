@@ -28,8 +28,9 @@ const getData = async (req, res) => {
       subject: `"${data.subject}"`,
       text: data.message,
       html: `
-    <p>${data.message}</p>
+    <b>Email:${data.name}<b>
     <b>Telefone:${data.phone}<b>
+    <p>${data.message}</p>
     `,
     };
 
@@ -40,7 +41,7 @@ const getData = async (req, res) => {
         "Email enviado com sucesso! verique sua caixa de span,iremos entrar em contato o mais rapido possivel",
     });
   } catch (error) {
-    return res.status(400).json({ error: error.message });
+    return res.status(err.response.status).json({ error: error.message });
   }
 };
 
