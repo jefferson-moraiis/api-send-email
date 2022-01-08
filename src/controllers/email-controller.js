@@ -8,7 +8,7 @@ const getData = async (req, res) => {
   const bodyJsonSchema = joi.object({
     subject: joi.string().required(),
     name: joi.string().required(),
-    phone: joi.number().min(11).required(),
+    phone: joi.number().required(),
     email: joi.string().email().required(),
     message: joi.string().required(),
   });
